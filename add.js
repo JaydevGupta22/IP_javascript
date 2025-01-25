@@ -7,6 +7,5 @@ function add(){
     console.log(x + " + " + y + " = " + z);
     console.log(`${x} + ${y} = ${x+y}`);
 }
-
 add(5,6)
 add(50,60)
