@@ -12,24 +12,41 @@
 //     console.log(i)
 // }
 
-const randomNumber = Math.floor(Math.random() * 100) + 1;
-let attempts = 0;
-let guess = null;
+// const randomNumber = Math.floor(Math.random() * 100) + 1;
+// let attempts = 0;
+// let guess = null;
 
-console.log("Welcome to the Guessing Game! 🎉");
+// console.log("Welcome to the Guessing Game! 🎉");
 
-// Keep guessing until the correct number is guessed
-while (guess !== randomNumber) {
-    guess = parseInt(prompt("Guess a number between 1 and 100: "), 10);
-    attempts++;
+// // Keep guessing until the correct number is guessed
+// while (guess !== randomNumber) {
+//     guess = parseInt(prompt("Guess a number between 1 and 100: "), 10);
+//     attempts++;
 
-    if (guess < randomNumber) {
-        console.log("Too low! Try again.");
-    } else if (guess > randomNumber) {
-        console.log("Too high! Try again.");
-    } else if (guess === randomNumber) {
-        console.log(`🎉 Correct! You guessed the number in ${attempts} attempts.`);
-    } else {
-        console.log("Please enter a valid number.");
+//     if (guess < randomNumber) {
+//         console.log("Too low! Try again.");
+//     } else if (guess > randomNumber) {
+//         console.log("Too high! Try again.");
+//     } else if (guess === randomNumber) {
+//         console.log(`🎉 Correct! You guessed the number in ${attempts} attempts.`);
+//     } else {
+//         console.log("Please enter a valid number.");
+//     }
+// }
+
+
+class Employee {
+    constructor(id, name, dept, salary) {
+        this.id = id;
+        this.name = name;
+        this.dept = dept;
+        this.salary = salary;
+    }
+
+    showEmpData() {
+        console.log(`${this.id} ${this.name} ${this.dept} ${this.salary}`);
     }
 }
+
+let obj = new Employee(21, "Jaydev", "Data", 500000);
+obj.showEmpData();
